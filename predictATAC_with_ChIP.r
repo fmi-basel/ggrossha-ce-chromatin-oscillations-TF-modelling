@@ -17,8 +17,8 @@ plotRadarAnnot <- function(x,...){
   text(1.1*Re(radSegs),1.1*Im(radSegs),paste0(phivecs/pi*180,"\u00B0"))
 }
 
-# load master table with all the required information
-MT <- read.delim("ATAC_peaks_xy_linModelCont_allInfo.txt",check.names=FALSE)
+# load master table with all the required information (GSE288867 on GEO:https://www.ncbi.nlm.nih.gov/geo/)
+MT <- read.delim("data/GSE288867_ATAC_peaks_xy_linModelCont_allInfo.txt",check.names=FALSE)
 
 # extract the ChIP-seq enrichment columns
 ChIP <- as.matrix(MT[,grep("ChIP_",colnames(MT))])
